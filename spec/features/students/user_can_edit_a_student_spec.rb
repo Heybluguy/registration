@@ -3,6 +3,7 @@ require 'rails_helper'
 describe 'as a user' do
   describe 'when im on index page' do
     scenario 'i can edit a student' do
+      student = Student.create(name: "Bob")
       visit students_path
 
       click_on "Edit"
